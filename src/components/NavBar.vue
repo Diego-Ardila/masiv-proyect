@@ -12,7 +12,7 @@
       <li class="title">
         <h4>SMS</h4>
       </li>
-      <li class="secondary-menu">
+      <li @click="toSms" class="secondary-menu">
           <i class="far fa-paper-plane med"></i>
           <span>Envio Simple</span> 
       </li>
@@ -21,7 +21,6 @@
 </template>
 
 <script>
-//import {mapState, mapActions} from 'vuex'
 
 export default {
   
@@ -38,6 +37,9 @@ export default {
   methods: {
     onClickedMenu() {
       return this.isNavClicked = !this.isNavClicked
+    },
+    toSms() {
+      return this.$router.push('/sms')
     }
   }
 }

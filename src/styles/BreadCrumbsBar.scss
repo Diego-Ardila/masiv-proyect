@@ -1,0 +1,39 @@
+.bar {
+    display: flex;
+    width: 100%;
+    height: 8%;
+    background-color: white;
+    align-items: center;
+
+    .bread-crumb {
+        color: gray;
+        margin-left: 1rem;
+        font-size: 15px;
+        font-weight: bold;
+        word-spacing: 10px;
+    }
+    
+    .user-info {
+        margin-left: auto;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        display: inline-flex;
+        align-items: center;
+        img {
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+        }
+        p {
+            color: gray;
+            font-weight: bolder;
+            font-size: 14px;
+            margin-left: 1rem;
+        }
+    }
+    .user-info:hover{
+        cursor: pointer;
+        background-color: rgba(173, 173, 173, 0.61);
+    }
+}
+

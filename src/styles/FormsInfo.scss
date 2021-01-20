@@ -1,0 +1,44 @@
+.container {
+    max-width: 35%;
+    height: 100%;
+    flex-basis: 40%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .cellphone-form {
+        margin-top: 10px;
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        .title {
+            color: rgb(26, 26, 110);
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .errors{
+            color: rgb(202, 2, 2);
+        }
+        .multiselect-component {
+            margin-top: 15px;
+        }
+    }
+}
+
+.info-forms-label {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.my-input {
+    z-index: 0;
+    height: 25px;
+    margin-top: 7px;
+    background-color: white;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 5px;
+    &:focus {
+        outline: none;
+        border: 1px rgb(58, 58, 255) solid;
+    }
+}

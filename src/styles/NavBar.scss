@@ -5,13 +5,14 @@ $secondary-background: rgb(56, 56, 110);
     display: inline-flex;
     margin: 0;
     color: white;
+    height: 100%;
     .primary-navbar{
         background-color: $primary-background;
         margin: 0;
         padding: 0;
         border-right: 1px rgba(73, 73, 73, 0.616) solid;
         width: 4.5rem;
-        height: 100vh;
+        height: 100%;
         display: flex;
         align-items: flex-start;
         flex-direction: column;
@@ -38,39 +39,38 @@ $secondary-background: rgb(56, 56, 110);
         }
     }
     .secondary-navbar {
+        position: absolute;
         background-color: $secondary-background;
         margin: 0;
         padding: 0;
         width: 200px;
-        height: 100vh;
-        overflow: hidden;
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        transition: all 300ms;
+        transition: all 600ms;
         transform: translateX(-100%);
+        display: none;
+        margin-left: 4.5rem;
+        z-index: 2;
         .title {
             font-size: 15px;
             background-color: $primary-background;
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            width: 100%;
             padding-left: 1.5rem;
             height: 50px;
         }
         .secondary-menu {
-            width: 100%;
             font-size: 12px;
             margin-top: 1rem;
             padding-left: 1.5rem;
-            width: 100%;
             height: 30px;
             border-bottom: 1px rgba(99, 99, 99, 0.8) solid;
             display: flex;
             justify-content: flex-start;
-            z-index: 1;
             .med {
                 font-size: 15px;
             }
@@ -84,6 +84,7 @@ $secondary-background: rgb(56, 56, 110);
     }
     .showMenu {
         transform: translateX(0%);
+        display: inline;
     }
 }
 

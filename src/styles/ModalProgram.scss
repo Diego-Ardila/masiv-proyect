@@ -1,0 +1,78 @@
+.modal {
+    display: none;
+    .modal-header {
+        width: 93%;
+        display: flex;
+        justify-content: space-between;
+        color: gray;
+        .close-modal {
+            font-weight: bolder;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    .input-wrapper {
+        display: flex;
+        flex-direction: column;
+        .label-input {
+            font-weight: bold;
+        }
+        .date-picker-input {
+            margin-top: 10px;
+            width: 550px;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px #ccc solid;
+            color: gray;
+        }
+    }
+
+    .footer {
+        width: 93%;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 25px;
+        border-top: 1px rgb(223, 223, 223) solid;
+        padding: 10px;
+        button {
+            width: 100px;
+            height: 35px;
+            border: white;
+            border-radius: 3px;
+        }
+        .close-button {
+            border: 1px #ccc solid;
+            &:hover{
+                background-color:gray;
+                color: white;
+                cursor: pointer;
+            }
+        }
+        .send-button {
+            background-color: rgb(48, 167, 87);
+            color: white;
+            margin-left: 10px;
+            &:hover {
+                background-color: rgb(11, 95, 39);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.show {
+    position: absolute;
+    z-index: 7;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    min-height: 200px;
+    background-color: white;
+    border: 1px rgb(134, 134, 134) solid;
+    border-radius: 5px;
+    margin-left: 30%;
+    margin-top: 2%;
+    box-shadow: 2px 2px 4px gray, -2px -2px 4px gray;
+    align-items: center;
+}
