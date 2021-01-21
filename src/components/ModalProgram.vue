@@ -36,12 +36,12 @@ export default {
         DatePicker
     },
     computed: {
-        ...mapState('smsSimpleModule',[
+        ...mapState('moduleSmsSimple',[
             'isProgramModalOpen'
         ])
     },
     methods: {
-        ...mapActions('smsSimpleModule',[
+        ...mapActions('moduleSmsSimple',[
             'openOrCloseProgramModal',
             'openOrCloseModalToSendSms'
         ]),

@@ -38,24 +38,24 @@ export default {
 
   computed: {
       ...mapState({
-          frecuentContacts: state => state.smsSimpleModule.frecuentContacts,
-          errors: state => state.smsSimpleModule.errors,
-          text: state => state.smsSimpleModule.textValue
+          frecuentContacts: state => state.moduleSmsSimple.frecuentContacts,
+          errors: state => state.moduleSmsSimple.errors,
+          text: state => state.moduleSmsSimple.textValue
       }),
       textValue: {
           get() {
               return this.text
           },
           set(value) {
-              return this.$store.commit('smsSimpleModule/setValue',value)
+              return this.$store.commit('moduleSmsSimple/setValue',value)
           }
       },
       selectionValue: {
           get() {
-              return this.$store.state.smsSimpleModule.selectionValue
+              return this.$store.state.moduleSmsSimple.selectionValue
           },
           set(value) {
-              return this.$store.commit('smsSimpleModule/setValue',value)
+              return this.$store.commit('moduleSmsSimple/setValue',value)
           }
       },
   },

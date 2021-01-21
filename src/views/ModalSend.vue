@@ -3,10 +3,10 @@
     <button @click="closeModal" class="close">X</button>
     <h3 class="title">Envio Exitoso</h3>
     <div class="wrapper">
-      <div v-if="smsTextValueFiltering.length > 0" class="text-values-container">
+      <div v-if="typesSmsSimple.getters.GET_INPUT_VALUE_FILTERED.length > 0" class="text-values-container">
         <p class="wrap-title">Estos son los nuevos numeros registrados:</p>
         <ul class="text-values">
-            <li v-for="(value, index) in smsTextValueFiltering" :key="index">{{value}}</li>
+            <li v-for="(value, index) in typesSmsSimple.getters.GET_INPUT_VALUE_FILTERED" :key="index">{{value}}</li>
         </ul>
       </div>
       <div v-if="selectionValue.length > 0" class="selection-values-container">
@@ -27,21 +27,22 @@
 
 <script>
 import { mapGetters, mapState, mapActions } from 'vuex'
+import {typesSmsSimple} from '@/store/modules/moduleSmsSimple/typesModuleSmsSimple'
 export default {
     computed: {
-        ...mapGetters('smsSimpleModule',[
-            'smsTextValueFiltering'
+        ...mapGetters('moduleSmsSimple',[
+            typesSmsSimple.getters.GET_INPUT_VALUE_FILTERED
         ]),
         ...mapState({
-            isSimpleModalOpen: state => state.smsSimpleModule.isSimpleModalOpen,
-            selectionValue: state => state.smsSimpleModule.selectionValue,
-            smsMessage: state => state.smsSimpleModule.smsMessage,
-            isPremium: state => state.smsSimpleModule.isPremium,
-            isFlash: state => state.smsSimpleModule.isFlash
+            isSimpleModalOpen: state => state.moduleSmsSimple.isSimpleModalOpen,
+            selectionValue: state => state.moduleSmsSimple.selectionValue,
+            smsMessage: state => state.moduleSmsSimple.smsMessage,
+            isPremium: state => state.moduleSmsSimple.isPremium,
+            isFlash: state => state.moduleSmsSimple.isFlash
         })
     },
     methods: {
-        ...mapActions('smsSimpleModule',[
+        ...mapActions('moduleSmsSimple',[
             'openOrCloseModalToSendSms',
             'resetValuesOnClose'
         ]),

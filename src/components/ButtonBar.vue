@@ -24,10 +24,10 @@ export default {
 
     computed: {
         ...mapState({
-            textValue: state => state.smsSimpleModule.textValue,
-            selectionValue: state => state.smsSimpleModule.selectionValue
+            textValue: state => state.moduleSmsSimple.textValue,
+            selectionValue: state => state.moduleSmsSimple.selectionValue
         }),
-        ...mapGetters('smsSimpleModule',[
+        ...mapGetters('moduleSmsSimple',[
             'smsDataValidations',
             'smsIsButtonDisabled'
         ])
@@ -47,7 +47,7 @@ export default {
         openProgramModal() {
             this.openOrCloseProgramModal(true)
         },
-        ...mapActions('smsSimpleModule',[
+        ...mapActions('moduleSmsSimple',[
             'openOrCloseModalToSendSms',
             'creatingNewError',
             "openOrCloseProgramModal"

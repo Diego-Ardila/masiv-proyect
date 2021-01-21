@@ -29,31 +29,31 @@ import { mapGetters } from 'vuex'
 
 export default {
   computed: {
-    ...mapGetters('smsSimpleModule',[
+    ...mapGetters('moduleSmsSimple',[
             'charsCounter'
         ]),
     smsMessage: {
           get() {
-              return this.$store.state.smsSimpleModule.smsMessage
+              return this.$store.state.moduleSmsSimple.smsMessage
           },
           set(value) {
-              return this.$store.commit('smsSimpleModule/setSmsMessage',value)
+              return this.$store.commit('moduleSmsSimple/setSmsMessage',value)
           }
       },
     isPremium: {
           get() {
-              return this.$store.state.smsSimpleModule.isPremium
+              return this.$store.state.moduleSmsSimple.isPremium
           },
           set(value) {
-              return this.$store.commit('smsSimpleModule/setPremiumValue',value)
+              return this.$store.commit('moduleSmsSimple/setPremiumValue',value)
           }
       },
       isFlash: {
           get() {
-              return this.$store.state.smsSimpleModule.isFlash
+              return this.$store.state.moduleSmsSimple.isFlash
           },
           set(value) {
-              return this.$store.commit('smsSimpleModule/setFlashValue',value)
+              return this.$store.commit('moduleSmsSimple/setFlashValue',value)
           }
       }
   }
